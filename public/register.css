@@ -1,10 +1,10 @@
 .register-photo {
-    background: #f1f7fc;
+   
 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .register-photo .image-holder {

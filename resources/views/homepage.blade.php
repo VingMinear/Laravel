@@ -22,6 +22,7 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link text-dark active" aria-current="page" href="{{url('/home')}}">Dashboard</a>
+          <a class="nav-link text-dark" href="{{url('/product')}}">Product</a>
           <a class="nav-link text-dark" href="{{url('/service')}}">Service</a>
           <a class="nav-link text-dark" href="{{url('/event')}}">Event</a>
           <a class="nav-link text-dark" href="{{url('/contact?phone=0974278786')}}">Contact</a>
@@ -42,6 +43,8 @@
     <div class="wave"></div>
     <div class="wave"></div>
   </div>
+
+ 
 </body>
 
 </html>
