@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
   <title>Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,11 +38,7 @@
     </div>
     </div>
   </nav>
-  <div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
+
 
  
 </body>

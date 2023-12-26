@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('content')
+@section('register')
   
         <div class="register-photo">
             <div class="form-container">
