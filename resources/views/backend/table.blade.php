@@ -1,4 +1,4 @@
-@extends('admin.layout.index')
+@extends('backend.layout.index')
 @section('content')
     <main class="main-content position-relative border-radius-lg ">
         <!-- Navbar -->

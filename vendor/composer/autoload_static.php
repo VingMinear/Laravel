@@ -352,8 +352,8 @@ class ComposerStaticInit65e85f9f959c0b087110331754d451cf
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -459,8 +459,8 @@ class ComposerStaticInit65e85f9f959c0b087110331754d451cf
         ),
         'Fruitcake\\Cors\\' => 
         array (
-            0 => __DIR__ . '/..' . '/fruitcake/php-cors/src',
-            1 => __DIR__ . '/..' . '/fruitcake/laravel-cors/src',
+            0 => __DIR__ . '/..' . '/fruitcake/laravel-cors/src',
+            1 => __DIR__ . '/..' . '/fruitcake/php-cors/src',
         ),
         'Faker\\' => 
         array (
@@ -532,6 +532,13 @@ class ComposerStaticInit65e85f9f959c0b087110331754d451cf
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\backend\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/backend/AdminController.php',
+        'App\\Http\\Controllers\\frontend\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/frontend/AboutController.php',
+        'App\\Http\\Controllers\\frontend\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/frontend/ContactController.php',
+        'App\\Http\\Controllers\\frontend\\CustomController' => __DIR__ . '/../..' . '/app/Http/Controllers/frontend/CustomController.php',
+        'App\\Http\\Controllers\\frontend\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/frontend/HomeController.php',
+        'App\\Http\\Controllers\\frontend\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/frontend/ProductController.php',
+        'App\\Http\\Controllers\\frontend\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/frontend/RegisterController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CustomController;
-use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\RegisterController;
+use App\Http\Controllers\frontend\ContactController;
+use App\Http\Controllers\frontend\ProductController;
+use App\Http\Controllers\frontend\CustomController;
+use App\Http\Controllers\backend\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,7 +40,7 @@ Route::controller(CustomController::class)->group(function(){
 });
 
 Route::post('register/save',[RegisterController::class,'save']);
-Route::redirect('/','/custom');
+Route::redirect('/','/admin');
 
 Route::get('/table/{num}',function($num){
     echo $num;
