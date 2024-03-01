@@ -35,6 +35,7 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/admin/create-room','createRoom');
     Route::get('/admin/edit-room/{id}','edit')->name('room.edit');
     Route::get('/admin/billing','billing');
+    Route::post('/admin/edit-room/update','updateRoom');
     Route::post('/admin/create-room/save', 'save');
     Route::get('/admin/delete-room/{id}', 'deleteRoom')->name('room.delete');
 });

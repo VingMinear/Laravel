@@ -7,7 +7,7 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">CreateRoom</h1>
+        <h1 class="h3 mb-2 text-white">CreateRoom</h1>
 
         <form action="{{ url('admin/create-room/save') }}" method="POST" autocomplete="off" enctype="multipart/form-data">
             @csrf
@@ -37,7 +37,7 @@
                             <div class="form-group row">
                                 <label for="room_desc" class="col-sm-2 col-form-label">RoomDesc</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" name="room_desc" id="room_desc">{{old('room_desc',request()->input('room_desc'))}}</textarea>
+                                    <textarea class="form-control" style=" min-width:500px; max-width:100%;min-height:120px;height:100%;width:100%;"  name="room_desc" id="room_desc">{{old('room_desc',request()->input('room_desc'))}}</textarea>
                                 </div>
                             </div>
 
@@ -45,8 +45,8 @@
                                 <label for="room_status" class="col-sm-2 col-form-label">Status</label>
                                 <div class="col-sm-10">
                                     <select class="form-select form-control" id="room_status" name="room_status">
-                                        <option value="1">Aailable</option>
-                                        <option value="0">Unavilable</option>
+                                        <option value="1">Available</option>
+                                        <option value="0">Unavailable</option>
                                     </select>
                                 </div>
                                 @error('room_status')
@@ -97,7 +97,7 @@
                     <div class="row mt-4">
                         <div class="col-auto">
                             {{-- <button class="btn btn-success">Save</button> --}}
-                            <button class="btn btn-success btn-icon-split">
+                            <button class="btn bg-gradient-success btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-check"></i>
                                 </span>

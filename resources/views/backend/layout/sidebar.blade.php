@@ -12,7 +12,7 @@ id="sidenav-main">
 <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link @yield('active')" href="{{url('/admin')}}">
+            <a class="nav-link @if(request()->is('admin')) active @endif" href="{{url('/admin')}}">
                 <div
                     class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -21,7 +21,7 @@ id="sidenav-main">
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link @yield('active')"  href="{{url('/admin/table')}}">
+            <a class="nav-link  @if(request()->is('admin/table')) active @endif"  href="{{url('/admin/table')}}">
                 <div
                     class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
@@ -30,7 +30,7 @@ id="sidenav-main">
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link "  href="{{url('/admin/create-room')}}">
+            <a class="nav-link @if(request()->is('admin/create-room')) active @endif"  href="{{url('/admin/create-room')}}">
                 <div
                     class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
