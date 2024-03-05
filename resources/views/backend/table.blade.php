@@ -2,20 +2,24 @@
 @section('title', 'All Room')
 
 @section('content')
-    <div class="row">
-        <div class="col-3 ms-5">
-            <div class="input-group">
-                <span class="input-group-text text-body"></span>
-                <input type="text" class="form-control" placeholder="Type here...">
+    <form action="{{ route('room.search') }}" method="GET">
+        <div class="row">
+
+            <div class="col-3 ms-5">
+                <div class="input-group">
+                    <span class="input-group-text text-body"></span>
+                    <input type="text" class="form-control" name="q_search" value="{{ $q_search ?? '' }}"
+                        placeholder="Type here...">
+                </div>
+            </div>
+            <div class="col-1">
+                <button class="btn bg-gradient-info btn-icon-split px-4">
+
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
-        <div class="col-1">
-            <button class="btn bg-gradient-info btn-icon-split px-4">
-
-                <i class="fas fa-search" aria-hidden="true"></i>
-            </button>
-        </div>
-    </div>
+    </form>
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-12">
@@ -46,16 +50,17 @@
                                         <th class="text-secondary opacity-7 text-center">Action</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
                                     @php($i = 0)
                                     @if ($rooms->isEmpty())
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <div class="text-center pt-3 ms-5">
-                                                No record found!
-                                            </div>
-                                        </td>
+                                        <tr>
+                                            <td class=""colspan='10'>
+                                                <div class="text-center mt-4">
+                                                    No record found!
+                                                </div>
+                                            </td>
+                                        </tr>
                                     @else
                                         @foreach ($rooms as $data)
                                             <tr>
@@ -112,8 +117,6 @@
                                         @endforeach
 
                                     @endif
-
-
                                 </tbody>
                             </table>
                             <hr>

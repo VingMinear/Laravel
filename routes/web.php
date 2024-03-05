@@ -38,6 +38,7 @@ Route::controller(AdminController::class)->group(function(){
     Route::post('/admin/edit-room/update','updateRoom');
     Route::post('/admin/create-room/save', 'save');
     Route::get('/admin/delete-room/{id}', 'deleteRoom')->name('room.delete');
+    Route::get('/admin/search','search')->name('room.search');
 });
 Route::controller(CustomController::class)->group(function(){
     Route::get('/custom','index');

@@ -98,18 +98,18 @@ class AdminController extends Controller
                 'room_name.required' => 'Please input the room name!',
             ]
         );
-        $data=[];
+        $data = [];
         try {
             $data = $req->except('_token', 'room_id', 'room_photo');
-          
+
             if ($req->room_photo) {
                 $data['room_photo'] = $req->file('room_photo')->store('uploads/rooms/', 'custom');
             }
-           
+
             $i = DB::table('rooms')
                 ->where('room_id', $req->room_id)
                 ->update($data);
-            
+
             if ($i) {
                 return redirect("admin/table")
                     ->with('success', 'Data has been updated!');
@@ -121,5 +121,25 @@ class AdminController extends Controller
             return back()->with('error', 'Something went wrong!'+$e);
             //throw $th;
         }
+    }
+    public function search(Request $req)
+    {
+        // SELECT * FROM rooms WHERE room_status = '1'  AND (room_name LIKE '%s%' OR room_desc LIKE "%d%")
+        $q_query = $req->q_search;
+        $data['rooms'] = DB::table('rooms')
+            ->join('room_types', 'room_types.room_type_id', '=', 'rooms.room_type_id')
+            ->select('rooms.*', 'room_types.room_type_name')
+            ->where('delete', '1')
+            ->where(function ($query) use ($q_query) {
+                $query = $query->orWhere('room_name', 'like', "%{$q_query}%")
+                    ->orWhere('room_desc', 'like', "%{$q_query}%");
+            })
+            ->orderBy('room_id', 'desc')
+            ->paginate(config('app.row'));
+
+
+            $data['q_search']=$q_query;
+            return view('backend.table', $data);
+
     }
 }
